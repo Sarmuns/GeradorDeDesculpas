@@ -14,15 +14,12 @@ function capitalizeFirstLetter(string) {
 
 function excuse(){
    let control = parseInt(Math.random()*intro.length)
-   let ex = intro[control]
-   ex = capitalizeFirstLetter(ex)
-   document.getElementById('pt1').innerHTML = capitalizeFirstLetter(ex) + '&nbsp'
+   let ex = intro[control] + '&nbsp';
    control = parseInt(Math.random()*scapeGoat.length)
-   ex = scapeGoat[control]
-   document.getElementById('pt2').innerHTML = normalizeText(ex) + '&nbsp'
+   ex += scapeGoat[control] + '&nbsp';
    control = parseInt(Math.random()*delay.length)
-   ex = delay[control]
-   document.getElementById('pt3').innerHTML = normalizeText(ex)
-   document.getElementsByClassName("center")[0].style.backgroundColor = "#5ead60"
-   //.map(x=>x.style.backgroundColor = "blue")
+   ex += delay[control]
+   ex = capitalizeFirstLetter(ex);
+   document.getElementsByClassName("frase")[0].style.backgroundColor = "#5ead60";
+   document.getElementById('excuse').innerHTML = ex;
 }
