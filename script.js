@@ -3,10 +3,6 @@ var scapeGoat = [`my nephEw`,`the ghost of hitler`,"the Pope", "my ex", "a high 
 var delay = [`just shit the bed`,`died in front of me`,"won't stop telling me knock knock jokes","is having a nervous breakdown","gave me syphilis","poured lemonade in my gas tank","stabbed me","found my box of human teeth","stole my bike","posted my nudes on instagram"]
 
 
-function normalizeText(string){
-    return string.toLowerCase()
-}
-
 function capitalizeFirstLetter(string) {
     string = string.toLowerCase()
     return string.charAt(0).toUpperCase() + string.slice(1);

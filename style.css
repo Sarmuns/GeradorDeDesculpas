@@ -6,12 +6,11 @@ body{
 }
 .wrap-col{
     display: flex;
-    flex-direction: column;
-    
-    
+    flex-direction: column;  
 }
 
 .header{
+    color: white;
     background: rgb(2, 75, 0); 
     background-image: linear-gradient(rgb(2, 75, 0),60%, #47ac4a);
     text-align: center;
@@ -20,7 +19,7 @@ body{
 }
 
 .frase{
-    margin-top: 12%;
+    margin-top: 4%;
     align-self:center;
     text-align: center;
     width: 80%
@@ -28,7 +27,7 @@ body{
 }
 
 .botao{
-    margin-top: 20px;
+    margin-top: 4%;
     align-self: center;
 }
 
@@ -46,16 +45,13 @@ body{
 #clickme:active{
     border: 2px solid #000000;
     color: black;
-  }
+}
 
   #clickme:hover{
     background-color: #5ead60;
     cursor: pointer
-  }
+}
 p{
     font-size: 180%;
     font-weight: bold;
-}
-.spacing{
-    height:30%;
 }
