@@ -4,18 +4,20 @@ var delay = [`just shit the bed`,`died in front of me`,"won't stop telling me kn
 
 
 function capitalizeFirstLetter(string) {
-    string = string.toLowerCase()
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
 
-function excuse(){
-   let control = parseInt(Math.random()*intro.length)
-   let ex = intro[control] + '&nbsp';
-   control = parseInt(Math.random()*scapeGoat.length)
-   ex += scapeGoat[control] + '&nbsp';
-   control = parseInt(Math.random()*delay.length)
-   ex += delay[control]
-   ex = capitalizeFirstLetter(ex);
-   document.getElementsByClassName("frase")[0].style.backgroundColor = "#5ead60";
-   document.getElementById('excuse').innerHTML = ex;
+function excuse() {
+  const introIndex = Math.floor(Math.random() * intro.length);
+  const scapeGoatIndex = Math.floor(Math.random() * scapeGoat.length);
+  const delayIndex = Math.floor(Math.random() * delay.length);
+
+  const message = `
+    ${capitalizeFirstLetter(intro[introIndex])}
+    ${scapeGoat[scapeGoatIndex]}
+    ${delay[delayIndex]}
+  `;
+
+  document.getElementsByClassName('frase')[0].style.backgroundColor = '#5ead60';
+  document.getElementById('excuse').innerHTML = message;
 }
